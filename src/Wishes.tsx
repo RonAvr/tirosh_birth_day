@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Box,
   Typography,
-  Grid,
   List,
   ListItem,
   ListItemText,
@@ -10,8 +9,6 @@ import {
   ListItemIcon,
 } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
-
-const drawerWidth = 240;
 
 const people = [
   { name: "Johnny", video: "Johnny.mp4" },

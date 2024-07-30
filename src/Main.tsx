@@ -5,18 +5,16 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Home from "./Home";
-import { Routes, Route, useLocation, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import Wishes from "./Wishes";
 import HomeIcon from "@mui/icons-material/Home";
 import EventNoteIcon from "@mui/icons-material/EventNote";
@@ -47,10 +45,6 @@ export default function Main() {
     }
   };
 
-  const location = useLocation();
-
-  const getActiveClass = (path: string) =>
-    location.pathname === path ? "active" : "";
   const drawer = (
     <div>
       <Toolbar />
