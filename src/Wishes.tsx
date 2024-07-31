@@ -22,7 +22,7 @@ const people = [
   { name: "Arnon & Dana", video: "Arnon.mp4" },
   { name: "Ella", video: "Ella.mp4" },
   { name: "Katie", video: "Katie.mp4" },
-  // { name: 'Adar', video: 'Adar.mp4' },
+  { name: "Adar", video: "Adar.mp4" },
 ];
 
 const Wishes: React.FC = () => {
