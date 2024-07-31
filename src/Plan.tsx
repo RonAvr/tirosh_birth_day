@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, CardMedia } from "@mui/material";
-import Calendar from "./assets/Calendar.png";
+// import Calendar from "./assets/Calendar.png";
 import Calendar2 from "./assets/Calendar2.png";
 
 const Plan: React.FC = () => {
