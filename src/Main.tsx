@@ -90,7 +90,7 @@ export default function Main() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            Tiroshima
           </Typography>
         </Toolbar>
       </AppBar>
