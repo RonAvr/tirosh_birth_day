@@ -60,7 +60,7 @@ const Wishes: React.FC = () => {
       >
         <Box sx={{ display: { xs: "block", md: "none" } }}>
           <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <InputLabel id="demo-simple-select-label">Name</InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
