@@ -56,7 +56,7 @@ const Wishes: React.FC = () => {
       <Paper
         elevation={3}
         className="sidebar"
-        sx={{ height: { xs: 150, md: "auto" }, overflow: { xs: "auto" } }}
+        sx={{ height: { xs: "auto", md: "auto" }, overflow: { xs: "auto" } }}
       >
         <Box sx={{ display: { xs: "block", md: "none" } }}>
           <FormControl fullWidth>
