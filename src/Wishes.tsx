@@ -7,6 +7,11 @@ import {
   ListItemText,
   Paper,
   ListItemIcon,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
 } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 
@@ -27,9 +32,18 @@ const people = [
 
 const Wishes: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [name, setName] = useState<string>("");
 
   const handleClick = (video: string) => {
     setSelectedVideo(video);
+  };
+
+  const handleChange = (event: SelectChangeEvent) => {
+    console.log(event.target.value as string);
+    const name = event.target.value as string;
+    const video_name = `${name}.mp4`;
+    setName(name);
+    setSelectedVideo(video_name);
   };
 
   return (
@@ -44,20 +58,40 @@ const Wishes: React.FC = () => {
         className="sidebar"
         sx={{ height: { xs: 150, md: "auto" }, overflow: { xs: "auto" } }}
       >
-        <List>
-          {people.map((person) => (
-            <ListItem
-              button
-              key={person.name}
-              onClick={() => handleClick(person.video)}
+        <Box sx={{ display: { xs: "block", md: "none" } }}>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={name}
+              label="Name"
+              onChange={handleChange}
             >
-              <ListItemIcon>
-                <PersonIcon />
-              </ListItemIcon>
-              <ListItemText primary={person.name} />
-            </ListItem>
-          ))}
-        </List>
+              {people.map((person) => (
+                <MenuItem value={person.name}>
+                  <MenuItem>{person.name}</MenuItem>
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </Box>
+        <Box sx={{ display: { xs: "none", md: "block" } }}>
+          <List>
+            {people.map((person) => (
+              <ListItem
+                button
+                key={person.name}
+                onClick={() => handleClick(person.video)}
+              >
+                <ListItemIcon>
+                  <PersonIcon />
+                </ListItemIcon>
+                <ListItemText primary={person.name} />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
       </Paper>
 
       <Box
